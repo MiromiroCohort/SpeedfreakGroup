@@ -9,27 +9,27 @@ describe ("createBoard", function() {
     expect(board.zindex).toEqual(1);
   });
   describe("createRoad", function() {
-    it("should return a road strip", function() {
+    xit("should return a road strip", function() {
       expect(new Road()).toBeDefined();
     });
-    it("should create an overlaying div", function(){
+    xit("should create an overlaying div", function(){
       var road = new Road();
       expect(road.zindex).toEqual(2);
     });
-    it("should have 7 columns", function() {
+    xit("should have 7 columns", function() {
       var road = new Road();
       expect(road.children).toEqual(7);
     });
-    it("should have a grassy margin on each side i.e. cols 1 and 7", function() {
+    xit("should have a grassy margin on each side i.e. cols 1 and 7", function() {
 
     });
-    it("should have outer lines on each side i.e. cols 2 and 6", function() {
+    xit("should have outer lines on each side i.e. cols 2 and 6", function() {
 
     });
-    it("should have two lanes i.e. cols 3 and 5", function() {
+    xit("should have two lanes i.e. cols 3 and 5", function() {
 
     });
-    it("should have one median strip i.e. col 4", function() {
+    xit("should have one median strip i.e. col 4", function() {
 
     });
   });
