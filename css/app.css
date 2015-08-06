@@ -5,16 +5,17 @@
   background-color:purple;
   /*width: 10%;*/
   /*height: 90%;*/
-  margin-top: 1%;
+  /*margin-top: 1%;*/
   display: inline-block;
 }
 
 #avatar{
   position:absolute;
-  float: left;
+  float: center;
   clear: all;
   z-index: 3;
-  margin-top: 600px;
+  margin-top: 400px;
+  width:80px;
 }
 
 #track{
@@ -45,6 +46,15 @@
 
 }
 
+.centre-line-stripe {
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background-color: black;
+
+}
+
 .side_line {
   display: inline-block;
   width: 10px;
@@ -57,5 +67,21 @@
   position: absolute;
   width: 10px;
   height: 30px;
-  background-color: grey;
+  background-color: lightgrey;
 }
+
+#scoreboard{
+  position: absolute;
+  display:block;
+  background-color: white;
+  border: black solid 4px;
+  height: 100px;
+  text-align: center;
+  margin-top: -20px;
+  z-index: 4;
+  width: 640px;
+}
+
+
+
+
