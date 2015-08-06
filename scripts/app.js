@@ -22,8 +22,9 @@ $(document).ready(function() {
       <div class='side_line'></div>\
       <div class='grass'></div>" );
 
-    $(".side_line").append(
-      "<div class='stripe moving'></div>")
+    if(i%100==0){$(".side_line").append(
+      "<div class='stripe moving'></div>").css("margin-top", ""+(-i))
+    }
   };
 
 
@@ -33,11 +34,15 @@ Board()
     if(!playerAlive){
       return;
     }
-    $(".moving").css("margin-top", i+"%");
+    $(".moving").css("margin-top", ((i/10)+"%"));
+      console.log($(this));
     setTimeout(doMove,30);
-    i= i+0.1
+    i= i+1
     if(playerPostion> 400){
       playerAlive=false
+    }
+    if(i%100==0){$(".side_line").append(
+      "<div class='stripe moving' data-value='"+i+"'></div>").css("margin-top", ""+(-i))
     }
   }
 
@@ -50,6 +55,7 @@ Board()
       playerPostion-=carManuvar
       $(avatar).css("margin-left", playerPostion)
     }
+
   })
 
 
