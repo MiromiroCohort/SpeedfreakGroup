@@ -1,0 +1,45 @@
+.board {
+  background-color: black;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 480px;
+  width: 640px;
+  z-index: 1; 
+  overflow: hidden;
+}
+.grass {
+  background-color: green;
+  position: absolute;
+  top: 0px;
+  height: 480px;
+  width: 60px;
+  z-index: 2; 
+}
+.side-line {
+  background-color: yellow;
+  position: absolute;
+  top: 0px;
+  height: 480px;
+  width: 10px;
+  z-index: 2; 
+}
+.lane {
+  background-color: gray;
+  position: absolute;
+  top: 0px;
+  height: 480px;
+  width: 245px;
+  z-index: 2;  
+}
+.center-line {
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  height: 480px;
+  width: 10px;
+  z-index: 2; 
+}
+.marker {
+  background-color: gray;
+}
