@@ -2,7 +2,6 @@
   position: absolute;
   z-index: 2;
   margin: 0 auto;
-  background-color:purple;
   /*width: 10%;*/
   /*height: 90%;*/
   /*margin-top: 1%;*/
@@ -10,17 +9,18 @@
 }
 
 #avatar{
+  position: absolute;
   float: left;
   clear: all;
-  z-index: 3;
-  max-height: 90px;
+  z-index: 4;
+  width: 40px;
 }
 
 .car_slider{
   height: 100px;
   margin: -120px auto;
   position: relative;
-  width: 600px;
+  width: 480px;
   z-index: 3;
 }
 
@@ -31,7 +31,7 @@
 .grass {
   display: inline-block;
   background-color: green;
-  width: 40px;
+  width: 63px;
   height: 100%;
 
 }
@@ -83,9 +83,14 @@
   border: black solid 4px;
   height: 100px;
   text-align: center;
-  margin-top: -20px;
+  margin-top:80px;
   z-index: 4;
   width: 640px;
+}
+
+.obstacle {
+  z-index: 3;
+  width: 50px;
 }
 
 
