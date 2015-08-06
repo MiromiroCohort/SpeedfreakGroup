@@ -4,15 +4,45 @@ $(document).ready(function() {
   var carManuvar = 6
   playerAlive = true
   var i =0
+
+
+  // Have to communicate on class names, so that it is styled by the CSS
+
+  $("#start").on("click", Board);
+
+  function Board(){
+    $("body").append( $("<div class='board'>").css({ "height": "480px", "width": "640px", "background-color": "black", "margin": "auto", "z-index": "1"}) );
+
+    $(".board").append(
+      "<div class='grass'></div>\
+      <div class='side_line'></div>\
+      <div class='road'></div>\
+      <div class='centre-line'></div>\
+      <div class='road'></div>\
+      <div class='side_line'></div>\
+      <div class='grass'></div>" );
+
+    if(i%100==0){$(".side_line").append(
+      "<div class='stripe moving'></div>").css("margin-top", ""+(-i))
+    }
+  };
+
+
+Board()
+
   function doMove() {
     if(!playerAlive){
       return;
     }
-    $(".moving").css("margin-top", i+"%");
+    $(".moving").css("margin-top", ((i/10)+"%"));
+      console.log($(this));
     setTimeout(doMove,30);
-    i= i+0.1
+    i= i+1
     if(playerPostion> 400){
       playerAlive=false
+    }
+    if(i%100==0){$(".side_line").append(
+      "<div class='stripe moving' data-value='"+i+"'></div>").css("margin-top", ""+(-i))
     }
   }
 
@@ -25,15 +55,9 @@ $(document).ready(function() {
       playerPostion-=carManuvar
       $(avatar).css("margin-left", playerPostion)
     }
+
   })
 
 
 });
-// var i =0
-// function doMove() {
-//   if(i>50){
-//     break;
-//   }
-//   $("#moving").css("margin-top", i+"%");
-//   setTimeout(doMove,100);
-// }
+
