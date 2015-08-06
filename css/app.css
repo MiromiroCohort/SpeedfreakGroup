@@ -1,0 +1,22 @@
+.moving{
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  background-color:orange;
+  /*width: 10%;*/
+  /*height: 90%;*/
+  margin-top: 1%;
+  display: inline-block;
+}
+
+#avatar{
+  position:absolute;
+  float: left;
+  clear: all;
+  z-index: 2;
+  margin-top: 600px;
+}
+
+#track{
+  text-align:center;
+}
