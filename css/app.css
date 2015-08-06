@@ -10,11 +10,19 @@
 }
 
 #avatar{
-  position:absolute;
+  position: ;
   float: left;
   clear: all;
   z-index: 3;
-  margin-top: 600px;
+  max-height: 90px;
+}
+
+.car_slider{
+  height: 100px;
+  margin: -120px auto;
+  position: relative;
+  width: 600px;
+  z-index: 3;
 }
 
 #track{

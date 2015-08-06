@@ -20,7 +20,8 @@ $(document).ready(function() {
       <div class='centre-line'></div>\
       <div class='road'></div>\
       <div class='side_line'></div>\
-      <div class='grass'></div>" );
+      <div class='grass'></div>\
+      <div class='car_slider'><img id='avatar' src='images/broombroomcar.png'></div>" );
 
     if(i%100==0){$(".side_line").append(
       "<div class='stripe moving'></div>").css("margin-top", ""+(-i))
@@ -35,7 +36,6 @@ Board()
       return;
     }
     $(".moving").css("margin-top", ((i/10)+"%"));
-      console.log($(this));
     setTimeout(doMove,30);
     i= i+1
     if(playerPostion> 400){
@@ -48,14 +48,15 @@ Board()
 
   doMove()
   $(document).keydown(function(event){
-    if(event.keyCode==39){
-      playerPostion+=carManuvar
-      $(avatar).css("margin-left", playerPostion)
-    }else if(event.keyCode==37){
-      playerPostion-=carManuvar
-      $(avatar).css("margin-left", playerPostion)
+    if ((parseInt($(avatar).css("margin-left")) >= 0) && (parseInt($(avatar).css("margin-left")) <= 550)) {
+      if(event.keyCode==39){
+        playerPostion+=carManuvar
+        $(avatar).css("margin-left", playerPostion)
+      }else if(event.keyCode==37){
+        playerPostion-=carManuvar
+        $(avatar).css("margin-left", playerPostion)
+      }
     }
-
   })
 
 
