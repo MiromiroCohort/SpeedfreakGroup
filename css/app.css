@@ -1,8 +1,8 @@
 .moving{
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   margin: 0 auto;
-  background-color:orange;
+  background-color:purple;
   /*width: 10%;*/
   /*height: 90%;*/
   margin-top: 1%;
@@ -13,10 +13,49 @@
   position:absolute;
   float: left;
   clear: all;
-  z-index: 2;
+  z-index: 3;
   margin-top: 600px;
 }
 
 #track{
   text-align:center;
+}
+
+.grass {
+  display: inline-block;
+  background-color: green;
+  width: 40px;
+  height: 100%;
+
+}
+
+.road {
+  display: inline-block;
+  background-color: blue;
+  width: 230px;
+  height: 100%;
+
+}
+
+.centre-line {
+  display: inline-block;
+  background-color: lightgrey;
+  width: 10px;
+  height: 100%;
+
+}
+
+.side_line {
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  background-color: orange;
+}
+
+.stripe {
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  background-color: grey;
 }

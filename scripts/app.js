@@ -4,6 +4,31 @@ $(document).ready(function() {
   var carManuvar = 6
   playerAlive = true
   var i =0
+
+
+  // Have to communicate on class names, so that it is styled by the CSS
+
+  $("#start").on("click", Board);
+
+  function Board(){
+    $("body").append( $("<div class='board'>").css({ "height": "480px", "width": "640px", "background-color": "black", "margin": "auto", "z-index": "1"}) );
+
+    $(".board").append(
+      "<div class='grass'></div>\
+      <div class='side_line'></div>\
+      <div class='road'></div>\
+      <div class='centre-line'></div>\
+      <div class='road'></div>\
+      <div class='side_line'></div>\
+      <div class='grass'></div>" );
+
+    $(".side_line").append(
+      "<div class='stripe moving'></div>")
+  };
+
+
+Board()
+
   function doMove() {
     if(!playerAlive){
       return;
@@ -29,11 +54,4 @@ $(document).ready(function() {
 
 
 });
-// var i =0
-// function doMove() {
-//   if(i>50){
-//     break;
-//   }
-//   $("#moving").css("margin-top", i+"%");
-//   setTimeout(doMove,100);
-// }
+
