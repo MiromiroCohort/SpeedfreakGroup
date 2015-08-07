@@ -44,7 +44,7 @@ describe ("Board", function(){
 
   it("should have a moving car in a layer over the board", function(){
     expect($(".car_slider").css("z-index")).toEqual("3")
-    expect($("#avatar").css("z-index")).toEqual("4")
+    expect($("#avatar").css("z-index")).toEqual("6")
 
   });
 });
@@ -93,18 +93,15 @@ describe ("Board", function(){
 // });
 
 
-describe ("CarController", function(){
-  var spyEvent;
-  board = new Board();
-  it("should move the image horizontally when the user presses the left or right arrows", function(){
-    spyEvent = spyOnEvent(($("body")), "keydown");
-    ($("body")).trigger("keydown");
-    expect("keydown").toHaveBeenTriggeredOn($("body"));
-    expect(spyEvent).toHaveBeenTriggered();
-  });
+// describe ("CarController", function(){
+//   var spyEvent;
+//   board = new Board();
+//   it("should move the image horizontally when the user presses the left or right arrows", function(){
+//     spyEvent = spyOnEvent(($("body")), "keydown");
+//     ($("body")).trigger("keydown");
+//     expect("keydown").toHaveBeenTriggeredOn($("body"));
+//     expect(spyEvent).toHaveBeenTriggered();
+//   });
 
-});
-=======
-  })
-})
->>>>>>> car_mover
+// });
+
