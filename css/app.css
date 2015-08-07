@@ -16,6 +16,21 @@
   width: 40px;
 }
 
+/*.shield{*/
+  /*position: absolute;*/
+  /*z-index: 10;*/
+  /*display: none;*/
+/*}*/
+
+.shield-status{
+  position: absolute;
+  z-index: 10;
+  display: none;
+  width: 80px;
+  margin-top: 80px;
+}
+
+
 .car_slider{
   height: 100px;
   margin: -120px auto;
@@ -118,11 +133,22 @@
 }
 
 .obstacle.death.barrel {
-  width: 20px;
+  width: 60px;
 }
 
 .bonus{
   width: 50px;
 }
 
+
+button {
+ font-size: 1em;
+ margin: 0;
+ color: red;
+ background-color: black;
+ width: 100px;
+ height: 50px;
+ display: inline-block;
+ margin-top: 300px;
+}
 
