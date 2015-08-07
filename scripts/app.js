@@ -1,3 +1,5 @@
+
+
   alert("jQuery loaded!");
   var playerPostion = 0
   var carManuvar = 6
@@ -10,6 +12,21 @@
   var centerLineCount = 0
   var bonusPoints = 0
   var shieled = false
+  var gameStart = false
+
+  function Start(){$("body").append("<div class='startscreen'><h1>SpeedFreak</h1><button class='startbutton'>Play!</button></div>")
+    $(".startscreen").css({ "position": "absolute", "height": "480px", "width": "640px", "background-image": "url(images/tits.jpg)", "background-repeat": "no-repeat", "margin": "0 0 0 600px", "z-index": "10", "text-align": "center"})
+    $(".startbutton").click(function(){ StartRemove()});
+  };
+
+Start()
+
+  function StartRemove(){
+    $(".startscreen").remove();
+    Board()
+    doMove()
+  }
+
 
   function Board(){
     $("body").append( $("<div class='board'>").css({ "height": "480px", "width": "640px", "background-color": "black", "margin": "auto", "z-index": "1"}) );
@@ -27,18 +44,20 @@
      $(".board").append("<h1 id='scoreboard'><br>Score:</h1>   <img src='images/shield.png' class='shield-status'>" );
 
 
+
     if(i%100==0){$(".side_line").append(
       "<div class='stripe moving'></div>").css("margin-top", ""+(-i))
     }
   };
 
 
-Board()
+
 
   function doMove() {
 
     if(!playerAlive){
       $("#avatar").attr("src", "images/explosion.gif").css({"width": "200px", "margin-top": "-100px"});
+      $("#scoreboard").text("Final Score:" + (parseInt((i/10)) + bonusPoints))
       return;
     }
      // $(".moving").css("margin-top", ((i/10)+"%"));
@@ -136,7 +155,7 @@ Board()
     if (i % 100 == 0){speedFactor++; console.log("speed factor = " + speedFactor)}
   } // end of function do move
 
-  doMove()
+  // doMove()
   $("body").keydown(function(event){
     if(playerAlive){
       if((parseInt($("#avatar").css("margin-left")) >= 0) && (parseInt($(avatar).css("margin-left")) <= 438)) {
